@@ -1,324 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html b:css='false' b:defaultmessages='true' b:responsive='true' dir='rtl' lang='ar' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/schemas/b/b/1.0' xmlns:b:default='http://www.google.com/schemas/b/b/1.0' xmlns:data='http://www.google.com/schemas/b/b/1.0' xmlns:expr='http://www.google.com/schemas/b/b/1.0'>
+  <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <b:include data='blog' name='all-head-content'/>
     <title>منصة الأدوات الذكية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif !important; }
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            padding: 20px 10px;
-            min-height: 100vh;
-        }
-        .app-container {
-            max-width: 850px;
-            margin: 20px auto;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h1 { font-size: 2.2rem; color: #38bdf8; margin-bottom: 8px; }
-        p.desc { color: #94a3b8; font-size: 1rem; }
-        .tools-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-        .nav-btn {
-            background: #1e293b;
-            color: #94a3b8;
-            border: 1px solid #334155;
-            padding: 10px 18px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        .nav-btn.active, .nav-btn:hover {
-            background: #0ea5e9;
-            color: #fff;
-            border-color: #0ea5e9;
-        }
-        .tool-card {
-            display: none;
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-        .tool-card.active { display: block; }
-        .tool-card h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1.4rem; }
-        .input-group {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        input[type="text"], input[type="number"], input[type="file"] {
-            flex: 1;
-            background: #0f172a;
-            border: 1px solid #334155;
-            padding: 12px 15px;
-            color: #fff;
-            border-radius: 8px;
-            outline: none;
-            font-size: 0.95rem;
-            direction: ltr;
-            text-align: left;
-        }
-        button.action-btn {
-            background: #0ea5e9;
-            color: #fff;
-            border: none;
-            padding: 12px 22px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        button.action-btn:hover { background: #0284c7; }
-        .res-box {
-            margin-top: 20px;
-            padding: 20px;
-            background: #0f172a;
-            border-radius: 10px;
-            border: 1px solid #334155;
-        }
-        .score-circle {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            border-radius: 50%;
-            background: #0ea5e9;
-            color: #fff;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-align: center;
-            margin: 15px 0;
-        }
-        .loading-text { color: #f59e0b; font-weight: bold; }
-        .thumb-preview { max-width: 100%; border-radius: 10px; margin-top: 15px; }
+    
+    <link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap' rel='stylesheet'/>
+
+    <style type='text/css'>
+      #navbar-iframe, .navbar, #b-navbar, .b-bar { display: none !important; visibility: hidden !important; }
+      
+      * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif !important; }
+      
+      body {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        padding: 20px 10px;
+        min-height: 100vh;
+      }
+
+      .app-container {
+        max-width: 850px;
+        margin: 20px auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h1 { font-size: 2.2rem; color: #38bdf8; margin-bottom: 8px; }
+      p.desc { color: #94a3b8; font-size: 1rem; }
+
+      .tools-nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+      }
+
+      .nav-btn {
+        background: #1e293b;
+        color: #94a3b8;
+        border: 1px solid #334155;
+        padding: 10px 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .nav-btn.active, .nav-btn:hover {
+        background: #0ea5e9;
+        color: #fff;
+        border-color: #0ea5e9;
+      }
+
+      .tool-card {
+        display: none;
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      }
+
+      .tool-card.active { display: block; }
+
+      .tool-card h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1.4rem; }
+
+      .input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+      }
+
+      input[type="text"], input[type="number"], input[type="file"] {
+        flex: 1;
+        background: #0f172a;
+        border: 1px solid #334155;
+        padding: 12px 15px;
+        color: #fff;
+        border-radius: 8px;
+        outline: none;
+        font-size: 0.95rem;
+        direction: ltr;
+        text-align: left;
+      }
+
+      button.action-btn {
+        background: #0ea5e9;
+        color: #fff;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      button.action-btn:hover { background: #0284c7; }
+
+      .res-box {
+        margin-top: 20px;
+        padding: 20px;
+        background: #0f172a;
+        border-radius: 10px;
+        border: 1px solid #334155;
+      }
+
+      .score-circle {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50%;
+        background: #0ea5e9;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      .loading-text { color: #f59e0b; font-weight: bold; }
+      .thumb-preview { max-width: 100%; border-radius: 10px; margin-top: 15px; }
     </style>
-</head>
-<body>
 
-    <div class="app-container">
-        <header>
-            <h1>🚀 منصة الأدوات والخدمات السريعة</h1>
-            <p class="desc">اختر الأداة التي تريد استخدامها من الأزرار بالأسفل</p>
-        </header>
+    <b:skin><![CDATA[]]></b:skin>
+  </head>
+  <body>
 
-        <div class="tools-nav">
-            <button class="nav-btn active" id="btn-tab-analyzer">🔍 فحص الموقع مع Google</button>
-            <button class="nav-btn" id="btn-tab-ytThumb">🎬 صور يوتيوب المصغرة</button>
-            <button class="nav-btn" id="btn-tab-imgResize">🖼️ تغيير حجم الصور</button>
-            <button class="nav-btn" id="btn-tab-pdfConvert">📄 تحويل إلى PDF</button>
+    <div class='app-container'>
+      <header>
+        <h1>🚀 منصة الأدوات والخدمات السريعة</h1>
+        <p class='desc'>اختر الأداة التي تريد استخدامها من الأزرار بالأسفل</p>
+      </header>
+
+      <div class='tools-nav'>
+        <button class='nav-btn active' id='btn-tab-analyzer'>🔍 فحص الموقع مع Google</button>
+        <button class='nav-btn' id='btn-tab-ytThumb'>🎬 صور يوتيوب المصغرة</button>
+        <button class='nav-btn' id='btn-tab-imgResize'>🖼️ تغيير حجم الصور</button>
+        <button class='nav-btn' id='btn-tab-pdfConvert'>📄 تحويل إلى PDF</button>
+      </div>
+
+      <!-- 1. أداة الفحص -->
+      <div class='tool-card active' id='tool-analyzer'>
+        <h2>🔍 فحص أداء الموقع المباشر من Google</h2>
+        <div class='input-group'>
+          <input id='targetDomain' placeholder='example.com' type='text' value=''/>
+          <button class='action-btn' id='btnAnalyze' type='button'>فحص عبر Google</button>
         </div>
-
-        <!-- 1. أداة الفحص -->
-        <div class="tool-card active" id="tool-analyzer">
-            <h2>🔍 فحص أداء الموقع المباشر من Google</h2>
-            <div class="input-group">
-                <input id="targetDomain" placeholder="example.com" type="text" />
-                <button class="action-btn" id="btnAnalyze" type="button">فحص عبر Google</button>
-            </div>
-            <div class="res-box" id="resAnalyzer" style="display:none; text-align:center;">
-                <div id="loadingState" class="loading-text">⏳ جاري الاتصال بخوادم Google وفحص الموقع...</div>
-                <div id="resultData" style="display:none;">
-                    <p>نقاط تقييم الأداء من Google:</p>
-                    <div class="score-circle" id="googleScore">0</div>
-                    <p style="margin-top:10px;"><b>رابط الموقع:</b> <span id="resDomain" style="color:#38bdf8;">-</span></p>
-                    <p><b>استجابة السيرفر (FCP):</b> <span id="fcpVal" style="color:#4ade80;">-</span></p>
-                </div>
-            </div>
+        <div class='res-box' id='resAnalyzer' style='display:none; text-align:center;'>
+          <div id='loadingState' class='loading-text'>⏳ جاري الاتصال بخوادم Google وفحص الموقع...</div>
+          <div id='resultData' style='display:none;'>
+            <p>نقاط تقييم الأداء من Google:</p>
+            <div class='score-circle' id='googleScore'>0</div>
+            <p style='margin-top:10px;'><b>رابط الموقع:</b> <span id='resDomain' style='color:#38bdf8;'>-</span></p>
+            <p><b>استجابة السيرفر (FCP):</b> <span id='fcpVal' style='color:#4ade80;'>-</span></p>
+          </div>
         </div>
+      </div>
 
-        <!-- 2. أداة اليوتيوب -->
-        <div class="tool-card" id="tool-ytThumb">
-            <h2>🎬 استخراج صورة يوتيوب المصغرة</h2>
-            <div class="input-group">
-                <input id="ytUrl" placeholder="ضع رابط فيديو اليوتيوب هنا..." type="text"/>
-                <button class="action-btn" id="btnYt" type="button">استخراج الصورة</button>
-            </div>
-            <div class="res-box" id="resYt" style="display:none; text-align:center;">
-                <img class="thumb-preview" id="ytImg" src=""/>
-                <br/><br/>
-                <a class="action-btn" id="downloadThumb" style="text-decoration:none; display:inline-block;" target="_blank">تحميل الصورة بجودة عالية (HD)</a>
-            </div>
+      <!-- 2. أداة اليوتيوب -->
+      <div class='tool-card' id='tool-ytThumb'>
+        <h2>🎬 استخراج صورة يوتيوب المصغرة</h2>
+        <div class='input-group'>
+          <input id='ytUrl' placeholder='ضع رابط فيديو اليوتيوب هنا...' type='text'/>
+          <button class='action-btn' id='btnYt' type='button'>استخراج الصورة</button>
         </div>
+        <div class='res-box' id='resYt' style='display:none; text-align:center;'>
+          <img class='thumb-preview' id='ytImg' src=''/>
+          <br/><br/>
+          <a class='action-btn' id='downloadThumb' style='text-decoration:none; display:inline-block;' target='_blank'>تحميل الصورة بجودة عالية (HD)</a>
+        </div>
+      </div>
 
-        <!-- 3. أداة الصور -->
-        <div class="tool-card" id="tool-imgResize">
-            <h2>🖼️ تغيير أبعاد وحجم الصور</h2>
-            <div class="input-group">
-                <input accept="image/*" id="imgInput" type="file"/>
-            </div>
-            <div class="input-group">
-                <input id="imgWidth" placeholder="العرض (px)" type="number"/>
-                <input id="imgHeight" placeholder="الارتفاع (px)" type="number"/>
-                <button class="action-btn" id="btnResize" type="button">تعديل الحجم</button>
-            </div>
-            <div class="res-box" id="resImg" style="display:none; text-align:center;">
-                <canvas id="canvas" style="max-width:100%; border-radius:10px;"></canvas>
-                <br/><br/>
-                <a class="action-btn" id="downloadImg" style="text-decoration:none; display:inline-block;">تحميل الصورة الجديدة</a>
-            </div>
+      <!-- 3. أداة الصور -->
+      <div class='tool-card' id='tool-imgResize'>
+        <h2>🖼️ تغيير أبعاد وحجم الصور</h2>
+        <div class='input-group'>
+          <input accept='image/*' id='imgInput' type='file'/>
         </div>
+        <div class='input-group'>
+          <input id='imgWidth' placeholder='العرض (px)' type='number'/>
+          <input id='imgHeight' placeholder='الارتفاع (px)' type='number'/>
+          <button class='action-btn' id='btnResize' type='button'>تعديل الحجم</button>
+        </div>
+        <div class='res-box' id='resImg' style='display:none; text-align:center;'>
+          <canvas id='canvas' style='max-width:100%; border-radius:10px;'/>
+          <br/><br/>
+          <a class='action-btn' id='downloadImg' style='text-decoration:none; display:inline-block;'>تحميل الصورة الجديدة</a>
+        </div>
+      </div>
 
-        <!-- 4. أداة PDF -->
-        <div class="tool-card" id="tool-pdfConvert">
-            <h2>📄 تحويل الملفات والنصوص إلى PDF</h2>
-            <div class="input-group">
-                <input accept=".txt, .doc, .docx" id="docInput" type="file"/>
-                <button class="action-btn" id="btnPdf" type="button">تحويل إلى PDF</button>
-            </div>
-            <div class="res-box" id="resPdf" style="display:none; text-align:center;">
-                <p style="color:#4ade80;">✅ تم تحويل الملف بنجاح!</p>
-                <button class="action-btn" style="margin-top:10px;" type="button">تنزيل ملف PDF</button>
-            </div>
+      <!-- 4. أداة PDF -->
+      <div class='tool-card' id='tool-pdfConvert'>
+        <h2>📄 تحويل الملفات والنصوص إلى PDF</h2>
+        <div class='input-group'>
+          <input accept='.txt, .doc, .docx' id='docInput' type='file'/>
+          <button class='action-btn' id='btnPdf' type='button'>تحويل إلى PDF</button>
         </div>
+        <div class='res-box' id='resPdf' style='display:none; text-align:center;'>
+          <p style='color:#4ade80;'>✅ تم تحويل الملف بنجاح!</p>
+          <button class='action-btn' style='margin-top:10px;' type='button'>تنزيل ملف PDF</button>
+        </div>
+      </div>
 
     </div>
 
-    <script>
-        // التنقل بين الأقسام
-        function bindTabs() {
-            var tabs = ['analyzer', 'ytThumb', 'imgResize', 'pdfConvert'];
-            tabs.forEach(function(id) {
-                var btn = document.getElementById('btn-tab-' + id);
-                if (btn) {
-                    btn.addEventListener('click', function() {
-                        document.querySelectorAll('.tool-card').forEach(function(c) { c.classList.remove('active'); });
-                        document.querySelectorAll('.nav-btn').forEach(function(b) { b.classList.remove('active'); });
-                        document.getElementById('tool-' + id).classList.add('active');
-                        btn.classList.add('active');
-                    });
-                }
+    <b:section class='main' id='main' showaddelement='false'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+        <b:includable id='main'/>
+      </b:widget>
+    </b:section>
+
+    <!-- الأكواد البرمجية مع الحماية من أخطاء تحرير القوالب -->
+    <script type='text/javascript'>
+      <![CDATA[
+      // التنقل بين الأقسام
+      function bindTabs() {
+        var tabs = ['analyzer', 'ytThumb', 'imgResize', 'pdfConvert'];
+        tabs.forEach(function(id) {
+          var btn = document.getElementById('btn-tab-' + id);
+          if (btn) {
+            btn.addEventListener('click', function() {
+              document.querySelectorAll('.tool-card').forEach(function(c) { c.classList.remove('active'); });
+              document.querySelectorAll('.nav-btn').forEach(function(b) { b.classList.remove('active'); });
+              document.getElementById('tool-' + id).classList.add('active');
+              btn.classList.add('active');
             });
+          }
+        });
+      }
+
+      // تنظيف الخانة وإغلاق أدوات الفحص
+      document.addEventListener("DOMContentLoaded", function() {
+        bindTabs();
+
+        var domainInput = document.getElementById('targetDomain');
+        if (domainInput) {
+          domainInput.value = '';
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
-            bindTabs();
+        // أداة الفحص عبر جوجل
+        document.getElementById('btnAnalyze').addEventListener('click', function() {
+          var rawVal = document.getElementById('targetDomain').value;
+          var cleaned = rawVal.replace(/^[/\s]+/, '').replace(/[/\s]+$/, '').trim();
 
-            var domainInput = document.getElementById('targetDomain');
-            if (domainInput) {
-                domainInput.value = '';
-            }
+          if (!cleaned) {
+            alert('يرجى إدخال رابط الموقع');
+            return;
+          }
 
-            // أداة الفحص عبر جوجل
-            document.getElementById('btnAnalyze').addEventListener('click', function() {
-                var rawVal = document.getElementById('targetDomain').value;
-                var cleaned = rawVal.replace(/^[/\s]+/, '').replace(/[/\s]+$/, '').trim();
+          if (!cleaned.startsWith('http://') && !cleaned.startsWith('https://')) {
+            cleaned = 'https://' + cleaned;
+          }
 
-                if (!cleaned) {
-                    alert('يرجى إدخال رابط الموقع');
-                    return;
-                }
+          var resBox = document.getElementById('resAnalyzer');
+          var loading = document.getElementById('loadingState');
+          var resultData = document.getElementById('resultData');
 
-                if (!cleaned.startsWith('http://') && !cleaned.startsWith('https://')) {
-                    cleaned = 'https://' + cleaned;
-                }
+          resBox.style.display = 'block';
+          loading.style.display = 'block';
+          loading.innerText = '⏳ جاري الاتصال بخوادم Google وفحص الموقع... قد يستغرق بضع ثوانٍ';
+          resultData.style.display = 'none';
 
-                var resBox = document.getElementById('resAnalyzer');
-                var loading = document.getElementById('loadingState');
-                var resultData = document.getElementById('resultData');
+          var api = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=' + encodeURIComponent(cleaned) + '&category=performance';
 
-                resBox.style.display = 'block';
-                loading.style.display = 'block';
-                loading.innerText = '⏳ جاري الاتصال بخوادم Google وفحص الموقع... قد يستغرق بضع ثوانٍ';
-                resultData.style.display = 'none';
+          fetch(api)
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+              if (data.lighthouseResult && data.lighthouseResult.categories) {
+                loading.style.display = 'none';
+                resultData.style.display = 'block';
 
-                var api = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=' + encodeURIComponent(cleaned) + '&category=performance';
+                var score = Math.round(data.lighthouseResult.categories.performance.score * 100);
+                var fcp = data.lighthouseResult.audits['first-contentful-paint'].displayValue;
 
-                fetch(api)
-                    .then(function(res) { return res.json(); })
-                    .then(function(data) {
-                        if (data.lighthouseResult && data.lighthouseResult.categories) {
-                            loading.style.display = 'none';
-                            resultData.style.display = 'block';
+                document.getElementById('resDomain').innerText = cleaned;
+                document.getElementById('googleScore').innerText = score;
+                document.getElementById('fcpVal').innerText = fcp;
 
-                            var score = Math.round(data.lighthouseResult.categories.performance.score * 100);
-                            var fcp = data.lighthouseResult.audits['first-contentful-paint'].displayValue;
-
-                            document.getElementById('resDomain').innerText = cleaned;
-                            document.getElementById('googleScore').innerText = score;
-                            document.getElementById('fcpVal').innerText = fcp;
-
-                            var circle = document.getElementById('googleScore');
-                            if (score >= 80) { circle.style.background = '#22c55e'; }
-                            else if (score >= 50) { circle.style.background = '#f59e0b'; }
-                            else { circle.style.background = '#ef4444'; }
-                        } else {
-                            throw new Error('بيانات غير صحيحة');
-                        }
-                    })
-                    .catch(function() {
-                        loading.innerText = '❌ تعذر الوصول للموقع. تأكد من أن الموقع يعمل ويوجد له نطاق صحيح (مثل: example.com)';
-                    });
+                var circle = document.getElementById('googleScore');
+                if (score >= 80) { circle.style.background = '#22c55e'; }
+                else if (score >= 50) { circle.style.background = '#f59e0b'; }
+                else { circle.style.background = '#ef4444'; }
+              } else {
+                throw new Error('بيانات غير صحيحة');
+              }
+            })
+            .catch(function() {
+              loading.innerText = '❌ تعذر الوصول للموقع. تأكد من أن الموقع يعمل ويوجد له نطاق صحيح (مثل: example.com)';
             });
-
-            // أداة يوتيوب
-            document.getElementById('btnYt').addEventListener('click', function() {
-                var url = document.getElementById('ytUrl').value.trim();
-                var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-                var match = url.match(regExp);
-                if (match && match[2].length == 11) {
-                    var videoId = match[2];
-                    var thumbUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
-                    document.getElementById('ytImg').src = thumbUrl;
-                    document.getElementById('downloadThumb').href = thumbUrl;
-                    document.getElementById('resYt').style.display = 'block';
-                } else {
-                    alert('رابط يوتيوب غير صحيح!');
-                }
-            });
-
-            // أداة الصور
-            document.getElementById('btnResize').addEventListener('click', function() {
-                var fileInput = document.getElementById('imgInput');
-                var width = document.getElementById('imgWidth').value;
-                var height = document.getElementById('imgHeight').value;
-
-                if (!fileInput.files[0] || !width || !height) {
-                    alert('يرجى اختيار صورة وتحديد العرض والارتفاع');
-                    return;
-                }
-
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    var img = new Image();
-                    img.onload = function() {
-                        var canvas = document.getElementById('canvas');
-                        canvas.width = width;
-                        canvas.height = height;
-                        var ctx = canvas.getContext('2d');
-                        ctx.drawImage(img, 0, 0, width, height);
-                        
-                        document.getElementById('downloadImg').href = canvas.toDataURL('image/jpeg');
-                        document.getElementById('downloadImg').download = 'resized-image.jpg';
-                        document.getElementById('resImg').style.display = 'block';
-                    };
-                    img.src = e.target.result;
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            });
-
-            // أداة PDF
-            document.getElementById('btnPdf').addEventListener('click', function() {
-                var file = document.getElementById('docInput').files[0];
-                if (!file) { alert('يرجى اختيار ملف للتحويل'); return; }
-                document.getElementById('resPdf').style.display = 'block';
-            });
-
         });
+
+        // أداة يوتيوب
+        document.getElementById('btnYt').addEventListener('click', function() {
+          var url = document.getElementById('ytUrl').value.trim();
+          var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+          var match = url.match(regExp);
+          if (match && match[2].length == 11) {
+            var videoId = match[2];
+            var thumbUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+            document.getElementById('ytImg').src = thumbUrl;
+            document.getElementById('downloadThumb').href = thumbUrl;
+            document.getElementById('resYt').style.display = 'block';
+          } else {
+            alert('رابط يوتيوب غير صحيح!');
+          }
+        });
+
+        // أداة الصور
+        document.getElementById('btnResize').addEventListener('click', function() {
+          var fileInput = document.getElementById('imgInput');
+          var width = document.getElementById('imgWidth').value;
+          var height = document.getElementById('imgHeight').value;
+
+          if (!fileInput.files[0] || !width || !height) {
+            alert('يرجى اختيار صورة وتحديد العرض والارتفاع');
+            return;
+          }
+
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            var img = new Image();
+            img.onload = function() {
+              var canvas = document.getElementById('canvas');
+              canvas.width = width;
+              canvas.height = height;
+              var ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, width, height);
+              
+              document.getElementById('downloadImg').href = canvas.toDataURL('image/jpeg');
+              document.getElementById('downloadImg').download = 'resized-image.jpg';
+              document.getElementById('resImg').style.display = 'block';
+            };
+            img.src = e.target.result;
+          };
+          reader.readAsDataURL(fileInput.files[0]);
+        });
+
+        // أداة PDF
+        document.getElementById('btnPdf').addEventListener('click', function() {
+          var file = document.getElementById('docInput').files[0];
+          if (!file) { alert('يرجى اختيار ملف للتحويل'); return; }
+          document.getElementById('resPdf').style.display = 'block';
+        });
+
+      });
+      ]]>
     </script>
-</body>
+  </body>
 </html>
